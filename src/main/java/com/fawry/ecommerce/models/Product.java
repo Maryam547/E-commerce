@@ -1,4 +1,4 @@
-package com.fawry.ecommerce.interfaces;
+package com.fawry.ecommerce.models;
 
 
 

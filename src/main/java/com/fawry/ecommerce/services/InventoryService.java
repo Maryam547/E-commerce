@@ -1,6 +1,6 @@
 package com.fawry.ecommerce.services;
 
-import com.fawry.ecommerce.interfaces.Product;
+import com.fawry.ecommerce.models.Product;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ArrayList;

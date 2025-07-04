@@ -1,7 +1,5 @@
 package com.fawry.ecommerce.models;
 
-import com.fawry.ecommerce.interfaces.Product;
-
 
 public class CartItem {
     private Product product;

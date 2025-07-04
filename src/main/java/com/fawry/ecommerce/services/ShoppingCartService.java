@@ -1,7 +1,6 @@
 package com.fawry.ecommerce.services;
 
-import com.fawry.ecommerce.interfaces.CartService;
-import com.fawry.ecommerce.interfaces.Product;
+import com.fawry.ecommerce.models.Product;
 import com.fawry.ecommerce.models.CartItem;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.fawry.ecommerce;
 
-import com.fawry.ecommerce.interfaces.CartService;
-import com.fawry.ecommerce.interfaces.ShippingCalculator;
+import com.fawry.ecommerce.services.CartService;
+import com.fawry.ecommerce.services.ShippingCalculator;
 import com.fawry.ecommerce.services.*;
 import com.fawry.ecommerce.utils.DataInitializer;
 import com.fawry.ecommerce.utils.InputUtils;

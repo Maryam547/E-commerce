@@ -1,6 +1,6 @@
 package com.fawry.ecommerce.models;
 
-import com.fawry.ecommerce.interfaces.Expirable;
+import com.fawry.ecommerce.services.Expirable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 

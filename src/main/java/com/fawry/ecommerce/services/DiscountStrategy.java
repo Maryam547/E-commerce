@@ -1,4 +1,4 @@
-package com.fawry.ecommerce.interfaces;
+package com.fawry.ecommerce.services;
 
 import com.fawry.ecommerce.models.CartItem;
 

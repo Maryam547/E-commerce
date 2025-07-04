@@ -1,7 +1,5 @@
 package com.fawry.ecommerce.services;
 
-import com.fawry.ecommerce.interfaces.ShippingCalculator;
-
 
 public class StandardShipping implements ShippingCalculator {
     private static final double RATE_PER_KG = 2.0;
