@@ -30,7 +30,6 @@ public class ShoppingCartService implements CartService {
             return;
         }
         
-        // Check if item already exists in cart
         CartItem existingItem = findCartItem(productName);
         if (existingItem != null) {
             int newQuantity = existingItem.getQuantity() + quantity;

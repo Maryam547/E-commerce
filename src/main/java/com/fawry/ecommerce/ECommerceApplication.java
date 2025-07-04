@@ -17,15 +17,12 @@ public class ECommerceApplication {
     }
     
     private void initializeServices() {
-        // Initialize services following Dependency Injection
         inventoryService = new InventoryService();
         cartService = new ShoppingCartService(inventoryService);
         checkoutService = new CheckoutService(cartService, inventoryService);
         
-        // Initialize sample data
         DataInitializer.initializeInventory(inventoryService);
         
-        // Setup discount strategies
         checkoutService.addDiscountStrategy(new PercentageDiscount(10, "Electronics"));
         checkoutService.addDiscountStrategy(new PercentageDiscount(15, "Clothing"));
         checkoutService.addDiscountStrategy(new FixedDiscount(5, 50));
@@ -158,7 +155,6 @@ public class ECommerceApplication {
         System.out.println("\n--- SHIPPING & CHECKOUT ---");
         cartService.displayCart();
         
-        // Select shipping method
         System.out.println("\nSelect Shipping Method:");
         System.out.println("1. Standard Shipping ($2/kg + $5 base)");
         System.out.println("2. Express Shipping ($4/kg + $15 base)");
@@ -174,11 +170,9 @@ public class ECommerceApplication {
         
         checkoutService.setShippingCalculator(shipping);
         
-        // Get customer details
         String customerName = InputUtils.getString("Enter your name: ");
         String address = InputUtils.getString("Enter your address: ");
         
-        // Show estimated costs
         double shippingCost = shipping.calculateShipping(cartService.getTotalWeight(), address);
         System.out.println("\nShipping Method: " + shipping.getShippingMethod());
         System.out.printf("Estimated Shipping Cost: $%.2f%n", shippingCost);
@@ -199,13 +193,11 @@ public class ECommerceApplication {
         
         cartService.displayCart();
         
-        // Show potential discounts
         System.out.println("\nAvailable Discounts:");
         System.out.println("• 10% off Electronics items");
         System.out.println("• 15% off Clothing items");
         System.out.println("• $5 off orders over $50");
         
-        // Show shipping options
         System.out.println("\nShipping Options:");
         System.out.printf("• Standard: $%.2f%n", 
             new StandardShipping().calculateShipping(cartService.getTotalWeight(), "local"));

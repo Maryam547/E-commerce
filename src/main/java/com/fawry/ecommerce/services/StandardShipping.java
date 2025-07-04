@@ -9,7 +9,6 @@ public class StandardShipping implements ShippingCalculator {
     public double calculateShipping(double weight, String address) {
         double cost = BASE_COST + (weight * RATE_PER_KG);
         
-        // Add extra cost for international shipping
         if (address.toLowerCase().contains("international")) {
             cost *= 2.5;
         }
